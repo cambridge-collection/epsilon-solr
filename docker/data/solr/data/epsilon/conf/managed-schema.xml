@@ -283,6 +283,8 @@
       <charFilter name="htmlStrip"/>
       <tokenizer name="standard"/>
       <filter class="solr.ASCIIFoldingFilterFactory" preserveOriginal="true"/>
+      <filter class="solr.WordDelimiterGraphFilterFactory" generateWordParts="1" generateNumberParts="1" splitOnNumerics="1" preserveOriginal="1"/>
+      <filter class="solr.FlattenGraphFilterFactory"/>
       <filter name="stop" ignoreCase="true" words="stopwords.txt"/>
       <filter name="lowercase"/>
       <filter name="englishPossessive"/>
@@ -293,6 +295,8 @@
       <charFilter name="htmlStrip"/>
       <tokenizer name="standard"/>
       <filter class="solr.ASCIIFoldingFilterFactory" preserveOriginal="true"/>
+      <filter class="solr.WordDelimiterGraphFilterFactory" generateWordParts="1" generateNumberParts="1" splitOnNumerics="1" preserveOriginal="1"/>
+      <filter class="solr.FlattenGraphFilterFactory"/>
       <filter name="stop" ignoreCase="true" words="stopwords.txt"/>
       <filter name="synonymGraph" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
       <filter name="lowercase"/>
